@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<title>Cheshier June Trip · Packing List 🧳</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:    #f5efe2;
+    --teal-deep:#0c4a52;
+    --teal:     #1f7a83;
+    --teal-mid: #2f9aa3;
+    --teal-soft:#b9dde0;
+    --mint:     #d6ecec;
+    --foam:     #e6f1f2;
+    --paper:    #ffffff;
+    --rose:     #e88d9b;
+    --gold:     #d8a85b;
+    --night:    #08323a;
+    --text:     #102229;
+    --muted:    #6c8489;
+    --plum:     #3a2858;
+    --plum-mid: #6b4a8c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { overflow-x: hidden; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(180deg, #08323a 0%, #135762 50%, #2a8c97 100%);
+    min-height: 52vw;
+    max-height: 420px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 48px 20px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 0; right: 0;
+    height: 70px;
+    background: var(--cream);
+    clip-path: ellipse(70% 100% at 50% 100%);
+  }
+  .star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle ease-in-out infinite;
+  }
+  @keyframes twinkle {
+    0%,100% { opacity: 0.2; transform: scale(0.8); }
+    50%     { opacity: 1;   transform: scale(1.2); }
+  }
+  .hero-icon { font-size: 2rem; margin-bottom: 10px; animation: bob 3s ease-in-out infinite; }
+  @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+  .hero-tag {
+    font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+    color: rgba(255,255,255,0.65); margin-bottom: 10px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 8vw, 3.2rem);
+    color: white; line-height: 1.1;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero-sub { font-size: 13px; color: rgba(255,255,255,0.72); margin-top: 8px; }
+  .hero-pills {
+    display: flex; gap: 7px; margin-top: 20px;
+    flex-wrap: wrap; justify-content: center;
+    position: relative; z-index: 2;
+  }
+  .pill {
+    background: rgba(255,255,255,0.14);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 100px; padding: 6px 14px;
+    font-size: 12px; color: white; font-weight: 500;
+  }
+
+  /* PROGRESS BAR */
+  .progress-section {
+    background: linear-gradient(135deg, var(--teal-deep) 0%, var(--teal) 100%);
+    padding: 22px 20px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  .progress-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.07), transparent 50%);
+  }
+  .progress-label {
+    font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+    color: rgba(255,255,255,0.65); margin-bottom: 10px;
+    position: relative;
+  }
+  .progress-nums {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; font-weight: 700; color: white;
+    line-height: 1; margin-bottom: 10px; position: relative;
+  }
+  .progress-nums span { font-size: 1rem; color: rgba(255,255,255,0.6); font-weight: 400; }
+  .progress-track {
+    max-width: 340px; margin: 0 auto;
+    height: 8px; background: rgba(255,255,255,0.18);
+    border-radius: 4px; overflow: hidden; position: relative;
+  }
+  .progress-fill {
+    height: 100%; background: var(--gold);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+  }
+  .progress-sub {
+    font-size: 11px; color: rgba(255,255,255,0.55);
+    margin-top: 8px; position: relative;
+  }
+
+  /* CONTENT */
+  .content {
+    max-width: 480px; margin: 0 auto; padding: 0 16px 40px;
+  }
+
+  /* FILTERS */
+  .filters-wrap {
+    display: flex; gap: 6px; flex-wrap: wrap;
+    margin: 24px 0 16px;
+  }
+  .filter-btn {
+    background: var(--paper);
+    border: 1.5px solid var(--teal-soft);
+    border-radius: 100px; padding: 6px 14px;
+    font-size: 12px; font-weight: 600;
+    color: var(--muted); cursor: pointer;
+    transition: all 0.15s; font-family: 'DM Sans', sans-serif;
+  }
+  .filter-btn:hover { border-color: var(--teal); color: var(--teal); }
+  .filter-btn.active {
+    background: var(--teal-deep); border-color: var(--teal-deep);
+    color: white;
+  }
+  .filter-btn.active.rose-filter {
+    background: var(--rose); border-color: var(--rose);
+  }
+  .filter-btn.active.plum-filter {
+    background: var(--plum-mid); border-color: var(--plum-mid);
+  }
+
+  /* SECTION */
+  .section { margin-bottom: 14px; }
+  .section-header {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 16px;
+    background: var(--paper);
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(12,74,82,0.06);
+    transition: box-shadow 0.15s;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  .section-header:hover { box-shadow: 0 4px 16px rgba(12,74,82,0.1); }
+  .section-header.open { border-radius: 14px 14px 0 0; }
+  .section-icon { font-size: 1.1rem; flex-shrink: 0; }
+  .section-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem; color: var(--teal-deep); flex: 1;
+  }
+  .section-count {
+    font-size: 11px; font-weight: 600;
+    color: var(--muted); background: var(--foam);
+    padding: 2px 8px; border-radius: 100px;
+  }
+  .section-chevron {
+    font-size: 12px; color: var(--muted);
+    transition: transform 0.2s; flex-shrink: 0;
+  }
+  .section-header.open .section-chevron { transform: rotate(90deg); }
+
+  .section-body {
+    background: var(--paper);
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 4px 12px rgba(12,74,82,0.06);
+    overflow: hidden;
+    display: none;
+  }
+  .section-body.open { display: block; }
+
+  /* ITEMS */
+  .item {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 11px 16px;
+    border-bottom: 1px solid var(--foam);
+    cursor: pointer;
+    transition: background 0.1s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .item:last-child { border-bottom: none; }
+  .item:hover { background: var(--foam); }
+  .check-box {
+    width: 20px; height: 20px;
+    border: 2px solid var(--teal);
+    border-radius: 6px;
+    flex-shrink: 0; margin-top: 1px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s;
+  }
+  .item.checked .check-box {
+    background: var(--teal); border-color: var(--teal);
+  }
+  .item.checked .check-box::after {
+    content: '✓'; color: white; font-size: 11px; font-weight: 700;
+  }
+  .item-body { flex: 1; min-width: 0; }
+  .item-text {
+    font-size: 13px; color: var(--teal-deep); font-weight: 500;
+    line-height: 1.4;
+  }
+  .item.checked .item-text {
+    text-decoration: line-through; color: var(--muted);
+  }
+  .item-note {
+    font-size: 11.5px; color: var(--muted);
+    margin-top: 2px; line-height: 1.45;
+  }
+  .item.checked .item-note { text-decoration: line-through; }
+
+  .city-tag {
+    display: inline-block; font-size: 9px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    padding: 2px 7px; border-radius: 100px;
+    margin-left: 6px; vertical-align: middle;
+  }
+  .city-tag.chi { background: var(--mint); color: var(--teal-deep); }
+  .city-tag.nyc { background: #e9def5; color: var(--plum); }
+
+  /* URGENT ITEMS */
+  .item.urgent .check-box { border-color: var(--rose); }
+  .item.urgent.checked .check-box { background: var(--rose); border-color: var(--rose); }
+
+  /* RESET BTN */
+  .reset-wrap { text-align: center; margin-top: 28px; }
+  .reset-btn {
+    background: none; border: 1.5px solid var(--teal-soft);
+    border-radius: 100px; padding: 8px 20px;
+    font-size: 12px; font-weight: 600;
+    color: var(--muted); cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.15s;
+  }
+  .reset-btn:hover { border-color: var(--rose); color: var(--rose); }
+
+  /* LOCATION DIVIDERS */
+  .loc-divider {
+    display: flex; align-items: center; gap: 12px;
+    margin: 32px 0 12px;
+  }
+  .loc-divider::before, .loc-divider::after {
+    content: ''; flex: 1; height: 2px; border-radius: 2px;
+  }
+  .loc-divider.chi::before, .loc-divider.chi::after {
+    background: linear-gradient(90deg, transparent, rgba(31,122,131,0.4), transparent);
+  }
+  .loc-divider.nyc::before, .loc-divider.nyc::after {
+    background: linear-gradient(90deg, transparent, rgba(107,74,140,0.4), transparent);
+  }
+  .loc-divider span {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; font-weight: 700;
+    white-space: nowrap;
+  }
+  .loc-divider.chi span { color: var(--teal-deep); }
+  .loc-divider.nyc span { color: var(--plum); }
+
+  /* DIVIDER */
+  .divider {
+    display: flex; align-items: center; gap: 10px; margin: 24px 0 8px;
+  }
+  .divider .line {
+    flex: 1; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(31,122,131,0.3), transparent);
+  }
+  .divider span { font-size: 0.9rem; opacity: 0.5; }
+
+  /* SUBLIST */
+  .sublist-header { cursor: pointer; }
+  .sublist-chevron { transition: transform 0.2s; display: inline-block; }
+  .sublist-chevron.open { transform: rotate(90deg); }
+  .sublist-body { display: none; background: var(--foam); border-left: 3px solid var(--teal-soft); margin: 0 0 0 16px; border-radius: 0 0 8px 8px; }
+  .sublist-body.open { display: block; }
+  .sublist-item { padding-left: 8px !important; }
+  .sublist-item .item-text { font-size: 12.5px; }
+
+  /* FOOTER */
+  .footer {
+    text-align: center; padding: 20px 16px 48px;
+    color: var(--muted); font-size: 12px;
+  }
+  .footer-heart { color: var(--rose); font-size: 1.1rem; }
+
+  /* EMPTY STATE */
+  .empty-state {
+    text-align: center; padding: 28px 20px;
+    color: var(--muted); font-size: 13px; font-style: italic;
+  }
+
+  /* REVEAL */
+  .reveal {
+    opacity: 0; transform: translateY(18px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="star" style="width:2px;height:2px;top:8%;left:12%;animation-duration:2.1s;"></div>
+  <div class="star" style="width:3px;height:3px;top:12%;left:30%;animation-duration:3.2s;animation-delay:0.4s;"></div>
+  <div class="star" style="width:2px;height:2px;top:6%;left:50%;animation-duration:2.8s;animation-delay:1s;"></div>
+  <div class="star" style="width:2px;height:2px;top:18%;left:62%;animation-duration:2.3s;animation-delay:0.7s;"></div>
+  <div class="star" style="width:3px;height:3px;top:5%;left:75%;animation-duration:3.5s;animation-delay:1.5s;"></div>
+  <div class="star" style="width:2px;height:2px;top:22%;left:8%;animation-duration:2s;animation-delay:0.2s;"></div>
+  <div class="star" style="width:2px;height:2px;top:15%;left:88%;animation-duration:3s;animation-delay:1.2s;"></div>
+
+  <div class="hero-icon">🧳</div>
+  <div class="hero-tag">The Cheshier's June Trip</div>
+  <h1>Packing <em>List</em></h1>
+  <div class="hero-sub">Chicago Jun 9–10 · New York Jun 11–13 · 3 people</div>
+  <div class="hero-pills">
+    <div class="pill">✈️ 2 Cities</div>
+    <div class="pill">🎭 3 Broadway Shows</div>
+    <div class="pill">🏙️ 5 Nights</div>
+    <div class="pill">👨‍👩‍👧 Family Trip</div>
+  </div>
+</section>
+
+<!-- PROGRESS -->
+<div class="progress-section">
+  <div class="progress-label">✦ packing progress ✦</div>
+  <div class="progress-nums" id="progress-nums">0 <span>/ <span id="total-count">0</span> items packed</span></div>
+  <div class="progress-track">
+    <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+  </div>
+  <div class="progress-sub" id="progress-sub">Let's get packing!</div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <div class="reveal">
+    <div class="filters-wrap" id="filter-wrap">
+      <button class="filter-btn active" data-filter="all">All items</button>
+      <button class="filter-btn" data-filter="both">🔁 Both Trips</button>
+      <button class="filter-btn rose-filter" data-filter="chi">🏙️ Chicago</button>
+      <button class="filter-btn plum-filter" data-filter="nyc">🗽 NYC</button>
+      <button class="filter-btn" data-filter="unpacked">Unpacked only</button>
+    </div>
+  </div>
+
+  <div id="sections-container"></div>
+
+  <div class="reset-wrap reveal">
+    <button class="reset-btn" id="reset-btn">↺ Reset all checkmarks</button>
+  </div>
+
+  <div class="footer reveal">
+    <div class="footer-heart">♥</div>
+    <div>Have an amazing trip, Cheshiers!</div>
+    <div style="margin-top:4px;opacity:0.7;">Chicago → New York → Home 🌆🗽🏡</div>
+  </div>
+
+</div>
+
+<script>
+const DATA = [
+  {
+    id: "both_trips",
+    icon: "🔁",
+    name: "Both Trips",
+    city: "both",
+    items: [
+      { text: "Fanny pack", city: "both" },
+      { text: "Black OnCloud shoes", note: "Miles of walking each day — prioritize comfort", city: "both" },
+      { text: "Sandals / shower shoes", note: "Beach day, casual wandering & hotel showers", city: "both" },
+      { text: "White Nike shoes", city: "both" },
+      { text: "Pajamas / sleepwear", note: "4 nights across 3 hotels", city: "both" },
+      { text: "Underwear & socks (5–6 days)", city: "both" },
+      { text: "Sticky boobs", city: "both" },
+      { text: "Pillow", city: "both" },
+      { text: "Blanket", city: "both" },
+      { text: "Portable tiny chair", note: "Compact folding chair for waits, parks & outdoor spots", city: "both" },
+      { text: "Sunscreen SPF 30+ (unscented)", note: "Outdoor walking in both cities", city: "both" },
+      { text: "Reusable water bottle", city: "both" },
+      { text: "Small umbrella", note: "June weather can be unpredictable in both cities", city: "both" },
+            { text: "Credit / debit cards", city: "both" },
+      { text: "Venmo / Apple Pay on all phones", city: "both" },
+      { text: "Citymapper app downloaded", note: "Used throughout both cities", city: "both" },
+      { text: "Uber / Lyft app installed & payment set up", note: "Several rides in NYC itinerary", city: "both" },
+      { text: "Neck pillow / sleep mask", note: "2:30 AM alarm for the NYC flight — it's early", city: "both" },
+      { text: "Snacks for train rides", note: "Little Bites muffins · granola bars — Dune Park→Chicago (71 min) & Hegewisch→Dune Park (37 min)", city: "both" },
+    ]
+  },
+  {
+    id: "inner_bag_bathroom",
+    icon: "🚿",
+    name: "Inner Bag — Bathroom",
+    city: "both",
+    note: "Travels inside Chicago bag → moves to NYC bag",
+    items: [
+      { text: "Shampoo, conditioner, body wash, moisturizer & face wash", city: "both" },
+      { text: "Toothbrush, toothpaste, floss", city: "both" },
+      { text: "Nail kit", note: "Nail file + essentials", city: "both" },
+      { text: "Deodorant", city: "both" },
+            { text: "Hair styling tools & accessories", city: "both" },
+      { text: "All prescription medications", urgent: true, city: "both" },
+      { text: "OTC kit (Tylenol, antacids, band-aids)", note: "Long days on your feet — blisters happen", city: "both" },
+      { text: "Feminine hygiene — micro liners + regular liners", city: "both" },
+      { text: "Hand sanitizer", note: "Buy in Chicago", city: "both" },
+      { text: "SPF Aquaphor", note: "Buy in Chicago", city: "both" },
+      { text: "Ziplock bags (2–3)", note: "TSA liquids bag + wet items, spills", city: "both" },
+    ]
+  },
+  {
+    id: "inner_bag_electronics",
+    icon: "🔌",
+    name: "Inner Bag — Electronics",
+    city: "both",
+    note: "Travels inside Chicago bag → moves to NYC bag",
+    items: [
+      { text: "New screen protector + change phone case", note: "Do both before the trip!", city: "both" },
+      { text: "Phone charger", city: "both" },
+      { text: "Watch charger", city: "both" },
+      { text: "Laptop charger", city: "both" },
+      { text: "iPad charger", city: "both" },
+      { text: "Portable charger", city: "both" },
+      { text: "HDMI cord", city: "both" },
+      { text: "Power cord", city: "both" },
+      { text: "Extension cord", city: "both" },
+      { text: "Heating pad", city: "both" },
+      { text: "Handheld fan", city: "both" },
+      { text: "Electronic fan", city: "both" },
+      { text: "Earbuds or headphones", note: "Train rides + downtime", city: "both" },
+    ]
+  },
+  {
+    id: "chi_general",
+    icon: "🏙️",
+    name: "Chicago — General",
+    city: "chi",
+    items: [
+      { text: "Metra / South Shore train tickets", note: "Train 22 · Dune Park → Millennium Station", city: "chi" },
+      { text: "Hotel Knickerbocker — conf. NJ77D57RP3WG", city: "chi" },
+      { text: "Hyatt Place — conf. #3966109", note: "ParkSleepFly · 4-day parking included", city: "chi" },
+      { text: "Chicago suitcase / bag (stays in car)", note: "Left at Dune Park — do NOT pack NYC items in here", urgent: true, city: "chi" },
+      { text: "Day backpack or tote for Chicago", note: "Use this instead of rolling bag while exploring", city: "chi" },
+      { text: "Cash (small bills)", note: "Devil Dawgs is CASH ONLY · also good for tips", urgent: true, city: "chi" },
+    ]
+  },
+  {
+    id: "chi_day1",
+    icon: "🌊",
+    name: "Chicago Day 1 — Tue, Jun 9",
+    note: "🏖️ Beach stuff goes in its own separate bag",
+    city: "chi",
+    items: [
+      { text: "Maria's Tuesday outfit 👗", note: "Beige ribbed tank · Black running shorts · White crew socks · Black sneakers", city: "chi" },
+      { text: "🏖️ Beach Bag", sublist: true, city: "chi", children: [
+        { text: "Swimwear / beach cover-up", note: "Oak Street Beach — weather dependent", city: "chi" },
+        { text: "Beach hat", city: "chi" },
+        { text: "Giant beach umbrella", city: "chi" },
+        { text: "Sand towel clips", note: "Keep towels from blowing away", city: "chi" },
+        { text: "Plastic bag (for foot rinse)", note: "Fill with water, walk to concrete, rinse sand off feet", city: "chi" },
+      ]},
+      { text: "Small crossbody bag", note: "Dinner out at Cheesecake Factory + evening out", city: "chi" },
+    ]
+  },
+  {
+    id: "chi_day2",
+    icon: "🍦",
+    name: "Chicago Day 2 — Wed, Jun 10",
+    city: "chi",
+    items: [
+      { text: "Maria's Wednesday outfit 👗", note: "White 'Ciao Bella' tank · Black running shorts · Black cap · White crew socks · Black sneakers", city: "chi" },
+      { text: "Reusable tote bag for shopping", note: "Primark + TJ Maxx near State St", city: "chi" },
+      { text: "Bounce luggage storage confirmation", note: "220 S Wabash Ave — drop day bag here while sightseeing", city: "chi" },
+      { text: "Eataly Gelato Class confirmation", city: "chi" },
+    ]
+  },
+  {
+    id: "nyc_general",
+    icon: "🗽",
+    name: "NYC — General",
+    city: "nyc",
+    items: [
+      { text: "Maria's airport outfit ✈️ (Thu morning + Sat)", note: "Black Nike cap · Olive zip-up hoodie · Green ribbed tank · Black sports bra · Black leggings · White crew socks · Black Nike sneakers", city: "nyc" },
+      { text: "Photo ID (driver's license or passport)", note: "Required for disability MetroCard at Jay St-MetroTech", urgent: true, city: "nyc" },
+      { text: "Doctor's notes", note: "MTA reduced-fare disability MetroCard — Mom & Maria", urgent: true, city: "nyc" },
+      { text: "Flight confirmation #CT7VZQ", urgent: true, city: "nyc" },
+      { text: "Hotel Mirage Brooklyn — booking #6773960977", city: "nyc" },
+      { text: "Carry-on bag for flight (per person)", note: "Carry-on + personal item per conf. #CT7VZQ — no checked bags", city: "nyc" },
+      { text: "Personal item bag for flight", note: "Keep tickets, IDs, valuables here during flight", city: "nyc" },
+      { text: "NYC suitcase / rolling bag (in car at Dune Park)", note: "Separate from Chicago bag — picked up when you return", urgent: true, city: "nyc" },
+      { text: "Day backpack or tote for NYC", note: "Broadway days, DUMBO, Grand Central, sightseeing", city: "nyc" },
+      { text: "Small crossbody bag", note: "No big bags at Broadway theaters", city: "nyc" },
+      { text: "MetroCard / contactless payment card", note: "Disability MetroCard obtained at Jay St on arrival", city: "nyc" },
+      { text: "Autograph Sharpie or pen", note: "Stage door after Chess (Thu) & Just In Time (Fri)", urgent: true, city: "nyc" },
+      { text: "Something to get signed", note: "Playbill, program, or poster", city: "nyc" },
+    ]
+  },
+  {
+    id: "nyc_day1",
+    icon: "🎭",
+    name: "NYC Day 1 — Thu, Jun 11",
+    city: "nyc",
+    items: [
+      { text: "Maria's Thursday daytime outfit 👗", note: "White/navy striped racerback tank · Navy shorts · Black Nike cap · White crew socks · Black sneakers", city: "nyc" },
+      { text: "Gayle's Broadway Rose reservation", note: "Thu Jun 11 · 5:00 PM confirmed", city: "nyc" },
+      { text: "Chess tickets — order #99722169", note: "Right Front Mezz Row A · Seats 401–403", city: "nyc" },
+          ]
+  },
+  {
+    id: "nyc_day2",
+    icon: "🎤",
+    name: "NYC Day 2 — Fri, Jun 12",
+    city: "nyc",
+    items: [
+      { text: "Just In Time tickets (PRINT AT HOME)", note: "Box Office #99394621 · Orchestra G207–G211", urgent: true, city: "nyc" },
+      { text: "Jeremy playbill", note: "Just In Time · Circle in the Square Theatre", city: "nyc" },
+          ]
+  },
+  {
+    id: "nyc_day3",
+    icon: "✈️",
+    name: "NYC Day 3 — Sat, Jun 13",
+    city: "nyc",
+    items: [
+      { text: "All bags packed before checkout", note: "Check out of Hotel Mirage Brooklyn", city: "nyc" },
+      { text: "Return flight / travel plan confirmed", note: "Drive from Hegewisch → Dune Park · South Shore Line", city: "nyc" },
+      { text: "Phone fully charged for travel day" },
+      { text: "Snacks for the drive + train home", note: "Dad picks up from Hegewisch — Sonic nearby in Alsip 🍦" },
+      { text: "Joyride candy 🍬", note: "It's Joyride Day! Pick some up for the world record photo with Ryan Trehan", city: "nyc" },
+    ]
+  }
+];
+
+let checked = new Set();
+let activeFilter = 'all';
+
+function sectionMatch(sec) {
+  if (activeFilter === 'all' || activeFilter === 'unpacked') return true;
+  if (activeFilter === 'chi') return sec.city === 'chi';
+  if (activeFilter === 'nyc') return sec.city === 'nyc';
+  if (activeFilter === 'both') return sec.city === 'both';
+  return true;
+}
+
+function cityMatch(item) {
+  if (activeFilter === 'all' || activeFilter === 'unpacked') return true;
+  if (activeFilter === 'chi') return item.city === 'chi' || !item.city;
+  if (activeFilter === 'nyc') return item.city === 'nyc' || !item.city;
+  if (activeFilter === 'both') return item.city === 'both';
+  return true;
+}
+
+function packedMatch(item) {
+  if (activeFilter === 'unpacked') return !checked.has(item.text);
+  return true;
+}
+
+function getVisible(items) {
+  return items.filter(i => cityMatch(i) && packedMatch(i));
+}
+
+function allItems(items) {
+  return items.flatMap(i => i.sublist ? [i, ...(i.children||[])] : [i]);
+}
+
+function updateProgress() {
+  const all = DATA.flatMap(s => allItems(s.items));
+  const total = all.length;
+  const done = all.filter(i => checked.has(i.text)).length;
+  document.getElementById('progress-nums').innerHTML =
+    `${done} <span>/ <span id="total-count">${total}</span> items packed</span>`;
+  const pct = total ? Math.round(done / total * 100) : 0;
+  document.getElementById('progress-fill').style.width = pct + '%';
+  const subs = [
+    [0, "Let's get packing! 🧳"],
+    [10, "Getting started — great! 🌟"],
+    [25, "You're on your way! ✈️"],
+    [50, "Halfway there — keep going! 💪"],
+    [75, "Almost done — nearly ready! 🙌"],
+    [99, "One more to go — so close! 👀"],
+    [100, "All packed — have an amazing trip! 🗽🏙️"]
+  ];
+  let sub = subs[0][1];
+  for (const [threshold, msg] of subs) { if (pct >= threshold) sub = msg; }
+  document.getElementById('progress-sub').textContent = sub;
+}
+
+function toggle(text) {
+  if (checked.has(text)) checked.delete(text);
+  else checked.add(text);
+  updateProgress();
+  if (activeFilter === 'unpacked') { renderSections(); return; }
+  document.querySelectorAll('.item').forEach(el => {
+    if (el.dataset.key === text) el.classList.toggle('checked', checked.has(text));
+  });
+  // update section counts
+  DATA.forEach(sec => {
+    const visItems = getVisible(sec.items);
+    const done = visItems.filter(i => checked.has(i.text)).length;
+    const countEl = document.getElementById('count-' + sec.id);
+    if (countEl) countEl.textContent = done + '/' + visItems.length;
+  });
+}
+
+function renderSections() {
+  const container = document.getElementById('sections-container');
+  let html = '';
+  const dividerShown = { chi: false, nyc: false, both: false };
+  DATA.forEach(sec => {
+    if (!sectionMatch(sec)) return;
+    const visItems = getVisible(sec.items);
+    if (!visItems.length) return;
+    if (sec.city === 'both' && !dividerShown.both) {
+      html += `<div class="loc-divider chi"><span>🔁 Both Trips</span></div>`;
+      dividerShown.both = true;
+    }
+    if (sec.city === 'chi' && !dividerShown.chi) {
+      html += `<div class="loc-divider chi"><span>🏙️ Chicago</span></div>`;
+      dividerShown.chi = true;
+    }
+    if (sec.city === 'nyc' && !dividerShown.nyc) {
+      html += `<div class="loc-divider nyc"><span>🗽 New York</span></div>`;
+      dividerShown.nyc = true;
+    }
+    const done = visItems.filter(i => checked.has(i.text)).length;
+    const isOpen = sec._open !== false;
+    html += `<div class="section reveal visible">
+      <div class="section-header${isOpen ? ' open' : ''}" onclick="toggleSection('${sec.id}')">
+        <span class="section-icon">${sec.icon}</span>
+        <div style="flex:1;min-width:0;">
+          <span class="section-name">${sec.name}</span>
+          ${sec.note ? `<div style="font-size:11px;color:var(--muted);margin-top:1px;">${sec.note}</div>` : ''}
+        </div>
+        <span class="section-count" id="count-${sec.id}">${done}/${visItems.length}</span>
+        <span class="section-chevron">${isOpen ? '▶' : '▶'}</span>
+      </div>
+      <div class="section-body${isOpen ? ' open' : ''}" id="body-${sec.id}">`;
+    visItems.forEach(item => {
+      if (item.sublist) {
+        const subId = 'sub-' + item.text.replace(/\W/g,'_');
+        const isSubOpen = item._open !== false;
+        const childDone = (item.children||[]).filter(c => checked.has(c.text)).length;
+        const isDone = checked.has(item.text);
+        html += `<div class="item sublist-header${isDone ? ' checked' : ''}" data-key="${item.text.replace(/"/g,'&quot;')}" onclick="toggleSublist('${subId}', this, event)">
+          <div class="check-box" onclick="event.stopPropagation();toggle('${item.text.replace(/'/g,"\\'")}')"></div>
+          <div class="item-body">
+            <div class="item-text">${item.text} <span style="font-size:11px;color:var(--muted);font-weight:400;">${childDone}/${(item.children||[]).length} packed</span></div>
+          </div>
+          <span class="sublist-chevron${isSubOpen ? ' open' : ''}" style="font-size:11px;color:var(--muted);margin-left:4px;">▶</span>
+        </div>
+        <div class="sublist-body${isSubOpen ? ' open' : ''}" id="${subId}">`;
+        (item.children||[]).forEach(child => {
+          const isChildDone = checked.has(child.text);
+          html += `<div class="item sublist-item${isChildDone ? ' checked' : ''}${child.urgent ? ' urgent' : ''}" data-key="${child.text.replace(/"/g,'&quot;')}" onclick="toggle(this.dataset.key)">
+            <div class="check-box"></div>
+            <div class="item-body">
+              <div class="item-text">${child.text}</div>
+              ${child.note ? `<div class="item-note">${child.note}</div>` : ''}
+            </div>
+          </div>`;
+        });
+        html += `</div>`;
+        return;
+      }
+      const isDone = checked.has(item.text);
+      const cityTag = item.city === 'chi'
+        ? `<span class="city-tag chi">CHI</span>`
+        : item.city === 'nyc'
+        ? `<span class="city-tag nyc">NYC</span>`
+        : '';
+      html += `<div class="item${isDone ? ' checked' : ''}${item.urgent ? ' urgent' : ''}" data-key="${item.text.replace(/"/g,'&quot;')}" onclick="toggle(this.dataset.key)">
+        <div class="check-box"></div>
+        <div class="item-body">
+          <div class="item-text">${item.text}${cityTag}</div>
+          ${item.note ? `<div class="item-note">${item.note}</div>` : ''}
+        </div>
+      </div>`;
+    });
+    if (!visItems.length) html += `<div class="empty-state">No items match this filter.</div>`;
+    html += `</div></div>`;
+  });
+  if (!html) html = `<div class="empty-state">No items match this filter.</div>`;
+  container.innerHTML = html;
+  updateProgress();
+}
+
+function toggleSublist(subId, headerEl, event) {
+  const body = document.getElementById(subId);
+  if (!body) return;
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  const chevron = headerEl.querySelector('.sublist-chevron');
+  if (chevron) chevron.classList.toggle('open', !isOpen);
+  // persist open state on DATA item
+  DATA.forEach(sec => sec.items.forEach(item => {
+    if (item.sublist && ('sub-' + item.text.replace(/\W/g,'_')) === subId) item._open = !isOpen;
+  }));
+}
+
+function toggleSection(id) {
+  const body = document.getElementById('body-' + id);
+  const header = body.previousElementSibling;
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  header.classList.toggle('open', !isOpen);
+  const sec = DATA.find(s => s.id === id);
+  if (sec) sec._open = !isOpen;
+}
+
+document.getElementById('filter-wrap').addEventListener('click', e => {
+  const btn = e.target.closest('.filter-btn');
+  if (!btn) return;
+  activeFilter = btn.dataset.filter;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderSections();
+  setTimeout(() => {
+    document.getElementById('sections-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 50);
+});
+
+document.getElementById('reset-btn').addEventListener('click', () => {
+  checked.clear();
+  renderSections();
+});
+
+renderSections();
+
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.05 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+setTimeout(() => document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible')), 400);
+</script>
+</body>
+</html>
